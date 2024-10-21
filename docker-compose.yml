@@ -2,6 +2,7 @@ version: '3.7'
 services:
   k6:
     image: loadimpact/k6
+    network_mode: host
     volumes:
       - ./scripts:/scripts
     command: run /scripts/load-test.js
